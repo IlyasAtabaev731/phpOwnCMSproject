@@ -55,7 +55,9 @@ class Settings
         $baseProperties = [];
         foreach ($this as $name => $item) {
             $property = $class::get($name);
-            $baseProperties[$name] = $property;
+            if(is_array($property) && is_array($item)) {
+                $baseProperties[$name] = array_merge_recursive($this->$name, $property);
+            }
         }
         exit();
     }
