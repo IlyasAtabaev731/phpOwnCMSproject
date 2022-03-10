@@ -1,0 +1,1 @@
+<div>real content <?=$name?></div>

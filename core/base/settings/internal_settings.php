@@ -3,8 +3,8 @@
 defined('VG_ACCESS') or die('Access denied');
 
 // Paths relative to index.php
-const TEMPLATES = 'templates/default';
-const ADMIN_TEMPLATE = 'core/admin/views';
+const TEMPLATES = 'templates/default/';
+const ADMIN_TEMPLATE = 'core/admin/view/';
 
 const COOKIE_VERSION = '1.0.0';
 const CRYPT_KEY = '';
@@ -29,7 +29,7 @@ use core\base\exceptions\RouteException;
 function auto_load_classes($class_name){
     $class_name = str_replace('\\', '/', $class_name);
     if (!@include_once $class_name . '.php') {
-        throw new RouteException('Не верное имя файла' . $class_name);
+        throw new RouteException('Не верное имя файла для подключения - ' . $class_name);
     }
 }
 spl_autoload_register('auto_load_classes');

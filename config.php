@@ -2,10 +2,10 @@
 
 defined('VG_ACCESS') or die('Access denied');
 
-const SITE_URL = 'http://phpStore.com';
+const SITE_URL = 'http://phpStore';
 const PATH = '/';
 
 const HOST = 'localhost';
 const USER = 'root';
 const PASS = '';
-const DB_NAME = '';
+const DB_NAME = 'store_cms';
